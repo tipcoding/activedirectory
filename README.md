@@ -31,7 +31,7 @@ then run the `NewFileMenu` scheme.
 If the menu does not appear, open the app and click **Open Extension
 Settings…**, then turn on **New File Menu**:
 
-- macOS 15+: System Settings › General › Login Items & Extensions › File Providers / Finder
+- macOS 15+: System Settings › General › Login Items & Extensions (Finder section)
 - macOS 13–14: System Settings › Privacy & Security › Extensions › Added Extensions
 - macOS 12: System Preferences › Extensions › Finder Extensions
 
