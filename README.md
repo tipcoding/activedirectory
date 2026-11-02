@@ -13,6 +13,8 @@ biết khi nào dùng, và các bài lab để luyện từng kỹ thuật.
 
 👉 BloodHound & SharpHound: [`bloodhound/README.md`](bloodhound/README.md) — kiến trúc, phiên bản (Legacy vs CE), các collector và biến thể, chạy trên từng hệ điều hành, import & truy vấn, khắc phục sự cố.
 
+👉 Giải thích mọi khái niệm AD: [`AD-concepts/README.md`](AD-concepts/README.md) — định nghĩa chi tiết từng khái niệm (forest, Kerberos, ACL, replication, ADCS, credentials…), ví dụ minh hoạ, link tài liệu gốc (Microsoft Learn, RFC, sách).
+
 ## Nội dung
 
 | # | File | Chủ đề |
