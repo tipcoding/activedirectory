@@ -11,6 +11,8 @@ biết khi nào dùng, và các bài lab để luyện từng kỹ thuật.
 
 👉 Giải thích chi tiết theo mindmap: [`mindmaps/AD-2025.03/README.md`](mindmaps/AD-2025.03/README.md) — đọc kỹ từng box/bảng của OCD AD Mindmap v2025.03, kèm lệnh, điều kiện chạy, kết quả và lý do (có backup file SVG gốc).
 
+👉 BloodHound & SharpHound: [`bloodhound/README.md`](bloodhound/README.md) — kiến trúc, phiên bản (Legacy vs CE), các collector và biến thể, chạy trên từng hệ điều hành, import & truy vấn, khắc phục sự cố.
+
 ## Nội dung
 
 | # | File | Chủ đề |
