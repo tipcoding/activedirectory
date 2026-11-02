@@ -1,61 +1,33 @@
-# New File Menu
+# Active Directory — Tài liệu ôn thi OSCP
 
-A small macOS app that adds a **New File** item to Finder's right-click menu.
-Right-click the background of a Finder window (or a folder/file) and pick a file
-type; a new file such as `untitled.txt` is created and selected. Existing names
-are never overwritten (`untitled 2.txt`, `untitled 3.txt`, ...).
+Repo tổng hợp các **attack path Active Directory** cho kỳ thi OSCP, dựa trên
+mindmap [Orange Cyberdefense](https://orange-cyberdefense.github.io/ocd-mindmaps/)
+và viết lại chi tiết: giải thích cơ chế, lệnh cụ thể (Kali + Windows), cách nhận
+biết khi nào dùng, và các bài lab để luyện từng kỹ thuật.
 
-Built-in types: Text, Markdown, Rich Text, HTML, JSON, Python, Shell script,
-Swift and an empty file with no extension.
+> Chỉ dùng trong môi trường lab / kỳ thi / pentest có ủy quyền.
 
-## Requirements
+👉 **Bắt đầu tại [`OSCP-AD/README.md`](OSCP-AD/README.md)** — có mục lục đầy đủ và lộ trình học.
 
-- macOS 12 or later
-- Xcode 14 or later
-- [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`, or `build.sh` installs it)
+## Nội dung
 
-## Build and install
+| # | File | Chủ đề |
+|---|------|--------|
+| 0 | [00-chuan-bi-cong-cu.md](OSCP-AD/00-chuan-bi-cong-cu.md) | Chuẩn bị tool, /etc/hosts, krb5.conf, đồng bộ giờ |
+| 1 | [01-khong-co-credential.md](OSCP-AD/01-khong-co-credential.md) | Không credential: enum, poisoning, relay, coerce |
+| 2 | [02-co-username.md](OSCP-AD/02-co-username.md) | Có username: AS-REP roast, password spraying |
+| 3 | [03-co-credential-enum.md](OSCP-AD/03-co-credential-enum.md) | Có credential: BloodHound, Kerberoast, share/GPP, MSSQL |
+| 4 | [04-leo-thang-acl-delegation.md](OSCP-AD/04-leo-thang-acl-delegation.md) | ACL/ACE, nhóm đặc quyền, LAPS, gMSA, delegation, shadow creds |
+| 5 | [05-adcs.md](OSCP-AD/05-adcs.md) | ADCS ESC1–ESC16 |
+| 6 | [06-local-admin-dump-credential.md](OSCP-AD/06-local-admin-dump-credential.md) | Privesc local + dump credential |
+| 7 | [07-lateral-movement-pivoting.md](OSCP-AD/07-lateral-movement-pivoting.md) | Lateral movement + pivoting |
+| 8 | [08-domain-admin-persistence.md](OSCP-AD/08-domain-admin-persistence.md) | DCSync, NTDS.dit, Golden/Silver ticket |
+| 9 | [09-trust.md](OSCP-AD/09-trust.md) | Domain/forest trust |
+| 10 | [10-labs.md](OSCP-AD/10-labs.md) | Danh sách lab theo kỹ thuật (HTB/PG/THM/PEN-200/GOAD/Vulnlab) |
+| 11 | [11-quy-trinh-thi-oscp.md](OSCP-AD/11-quy-trinh-thi-oscp.md) | Quy trình thi + quản lý thời gian |
+| 12 | [12-cheatsheet.md](OSCP-AD/12-cheatsheet.md) | Cheatsheet 1 trang |
 
-```bash
-./build.sh
-```
+---
 
-This generates the Xcode project, builds a Release build, copies it to
-`/Applications`, enables the Finder extension and restarts Finder.
-
-To work in Xcode instead: `xcodegen generate && open NewFileMenu.xcodeproj`,
-then run the `NewFileMenu` scheme.
-
-## Enable the extension
-
-If the menu does not appear, open the app and click **Open Extension
-Settings…**, then turn on **New File Menu**:
-
-- macOS 15+: System Settings › General › Login Items & Extensions (Finder section)
-- macOS 13–14: System Settings › Privacy & Security › Extensions › Added Extensions
-- macOS 12: System Preferences › Extensions › Finder Extensions
-
-Or from Terminal:
-
-```bash
-pluginkit -e use -i com.example.NewFileMenu.FinderExtension
-killall Finder
-```
-
-## Customize
-
-- **File types:** edit `FileTemplate.all` in `Shared/FileTemplate.swift`.
-- **Bundle IDs:** change `com.example.NewFileMenu` in `project.yml` (and in `build.sh`).
-- **Signing:** the project is ad-hoc signed for local use. Set `DEVELOPMENT_TEAM`
-  in `project.yml` to your Apple team ID to sign with your certificate.
-
-## How it works
-
-The app hosts a [Finder Sync extension](https://developer.apple.com/documentation/findersync)
-(`FinderExtension/FinderSync.swift`) that watches `/` and returns a context menu for
-`.contextualMenuForContainer` and `.contextualMenuForItems`. The target folder is the
-clicked folder, the parent of a clicked file, or the folder shown in the window.
-Finder Sync extensions must be sandboxed, so the extension uses a
-`temporary-exception.files.absolute-path.read-write` entitlement to write to any
-folder. That entitlement is fine for personal use or direct distribution but is not
-accepted on the Mac App Store.
+_App macOS "New File Menu" trước đây ở repo này đã được chuyển sang
+[tipcoding/macos-apps-newfilemenu](https://github.com/tipcoding/macos-apps-newfilemenu)._
