@@ -34,7 +34,10 @@ Mỗi file là một nhóm khái niệm. Trong file, mỗi khái niệm theo c�
 | 15 | [15-mo-hinh-bao-mat-tiering.md](15-mo-hinh-bao-mat-tiering.md) | Tier model, Protected Users, AdminSDHolder/SDProp, adminCount, PAW, LAPS, RBAC, least privilege |
 | 16 | [16-hybrid-entra-azuread.md](16-hybrid-entra-azuread.md) | Entra ID (Azure AD), AD Connect, PHS/PTA/Federation, seamless SSO, hybrid join |
 | 17 | [17-thuat-ngu-tra-cuu.md](17-thuat-ngu-tra-cuu.md) | Bảng tra cứu nhanh thuật ngữ & viết tắt (A→Z) |
-| 18 | [18-kerberos-attacks.md](18-kerberos-attacks.md) | **Kerberos Attacks deep-dive**: AS-REP/Kerberoast, delegation (unconstrained/constrained/RBCD + krbrelayx), Golden/Silver ticket, PtT, enum/spray — bám sát bài Hacer Dalkıran (HTB Academy) |
+
+> Phần **tấn công** (Kerberos attacks deep-dive, tổng hợp kỹ thuật) đã tách sang
+> thư mục riêng: [`../AD-attacks/`](../AD-attacks/README.md). Thư mục `AD-concepts/`
+> này chỉ giữ **lý thuyết/khái niệm**.
 
 ## 📚 Sách & tài liệu gốc (bibliography)
 

@@ -4,7 +4,7 @@ Tài liệu đi sâu các kiểu tấn công Kerberos, **biên soạn bám sát 
 ["Kerberos Attacks" của Hacer Dalkıran](https://hacerdalkiran.medium.com/kerberos-attacks-c21473d5a378)**
 (ghi chú chủ yếu từ **HTB Academy**), diễn giải chi tiết + giữ nguyên mọi lệnh,
 bổ sung phần phát hiện/phòng thủ. Xem thêm nền tảng giao thức ở
-[file 07 — Kerberos & NTLM](07-xac-thuc-kerberos-ntlm.md).
+[file 07 — Kerberos & NTLM](../AD-concepts/07-xac-thuc-kerberos-ntlm.md).
 
 ## Phân loại 3 nhóm tấn công (theo bài viết)
 
@@ -346,7 +346,7 @@ Get-ADUser krbtgt -Property PasswordLastSet
 ---
 
 ## Tham chiếu chéo trong repo
-- Giao thức Kerberos (TGT/TGS/PAC/SPN): [07-xac-thuc-kerberos-ntlm.md](07-xac-thuc-kerberos-ntlm.md)
+- Giao thức Kerberos (TGT/TGS/PAC/SPN): [07-xac-thuc-kerberos-ntlm.md](../AD-concepts/07-xac-thuc-kerberos-ntlm.md)
 - Khai thác theo mindmap: [delegation](../mindmaps/AD-2025.03/05-kerberos-delegation.md),
   [credentials](../mindmaps/AD-2025.03/07-credentials-harvesting.md),
   [domain admin/persistence](../mindmaps/AD-2025.03/12-domain-admin-persistence.md)

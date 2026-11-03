@@ -7,17 +7,18 @@ cụ thể (Kali + Windows), điều kiện chạy, kết quả mong đợi, lý
 
 > Chỉ dùng trong môi trường lab / kỳ thi / pentest có ủy quyền.
 
-## Bốn bộ tài liệu
+## Năm bộ tài liệu
 
 | Thư mục | Nội dung | Bắt đầu |
 |---------|----------|---------|
 | 📘 [`AD-concepts/`](AD-concepts/README.md) | **Lý thuyết** — giải thích mọi khái niệm AD, ví dụ, link tài liệu gốc | [README](AD-concepts/README.md) |
+| ⚔️ [`AD-attacks/`](AD-attacks/README.md) | **Tấn công** — bài tổng hợp kỹ thuật tấn công AD + Kerberos attacks deep-dive | [README](AD-attacks/README.md) |
 | 🗺️ [`mindmaps/AD-2025.03/`](mindmaps/AD-2025.03/README.md) | **Attack paths** — giải thích từng box/bảng của OCD AD Mindmap v2025.03 | [README](mindmaps/AD-2025.03/README.md) |
 | 🎯 [`OSCP-AD/`](OSCP-AD/README.md) | **Quy trình luyện thi** — kỹ thuật theo trạng thái + lab + cheatsheet | [README](OSCP-AD/README.md) |
 | 🩸 [`bloodhound/`](bloodhound/README.md) | **Công cụ** — BloodHound/SharpHound, phiên bản, collector, theo OS | [README](bloodhound/README.md) |
 
-Gợi ý lộ trình: đọc **AD-concepts** để hiểu bản chất → **mindmaps/AD-2025.03** để
-thấy đường tấn công → **OSCP-AD** để luyện quy trình & lab → **bloodhound** khi
+Gợi ý lộ trình: đọc **AD-concepts** để hiểu bản chất → **AD-attacks** & **mindmaps/AD-2025.03**
+để thấy đường tấn công → **OSCP-AD** để luyện quy trình & lab → **bloodhound** khi
 cần dựng bản đồ tấn công.
 
 ---
@@ -46,7 +47,19 @@ Learn, RFC, sách). Có thư mục sách & tài liệu tham khảo trong [README
 | 15 | [mo-hinh-bao-mat-tiering](AD-concepts/15-mo-hinh-bao-mat-tiering.md) | Tier model, Protected Users, AdminSDHolder/SDProp, PAW |
 | 16 | [hybrid-entra-azuread](AD-concepts/16-hybrid-entra-azuread.md) | Entra ID, AD Connect, PHS/PTA/Federation, Golden SAML |
 | 17 | [thuat-ngu-tra-cuu](AD-concepts/17-thuat-ngu-tra-cuu.md) | Bảng tra cứu thuật ngữ & viết tắt A→Z |
-| 18 | [kerberos-attacks](AD-concepts/18-kerberos-attacks.md) | Kerberos Attacks deep-dive (AS-REP/Kerberoast, delegation, Golden/Silver, PtT) |
+
+---
+
+## ⚔️ AD-attacks — Bài tổng hợp tấn công AD
+
+Phần tấn công tách riêng để xem/ôn nhanh (tách khỏi lý thuyết ở AD-concepts). Có
+bài tổng hợp kỹ thuật theo nhóm (trỏ tới chi tiết ở mindmaps/OSCP-AD) và một
+deep-dive Kerberos.
+
+| File | Nội dung |
+|------|----------|
+| [README](AD-attacks/README.md) | Tổng hợp kỹ thuật tấn công AD theo nhóm (recon → DA → persistence → trusts) |
+| [kerberos-attacks](AD-attacks/kerberos-attacks.md) | Kerberos Attacks deep-dive (AS-REP/Kerberoast, delegation, Golden/Silver, PtT) |
 
 ---
 
