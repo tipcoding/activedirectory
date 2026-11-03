@@ -127,5 +127,4 @@ Kiến trúc, phiên bản (Legacy vs CE), các collector/biến thể, chạy t
 
 ---
 
-_App macOS "New File Menu" trước đây ở repo này đã được chuyển sang
-[tipcoding/macos-apps-newfilemenu](https://github.com/tipcoding/macos-apps-newfilemenu)._
+CDCyber Academy
