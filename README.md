@@ -46,6 +46,7 @@ Learn, RFC, sách). Có thư mục sách & tài liệu tham khảo trong [README
 | 15 | [mo-hinh-bao-mat-tiering](AD-concepts/15-mo-hinh-bao-mat-tiering.md) | Tier model, Protected Users, AdminSDHolder/SDProp, PAW |
 | 16 | [hybrid-entra-azuread](AD-concepts/16-hybrid-entra-azuread.md) | Entra ID, AD Connect, PHS/PTA/Federation, Golden SAML |
 | 17 | [thuat-ngu-tra-cuu](AD-concepts/17-thuat-ngu-tra-cuu.md) | Bảng tra cứu thuật ngữ & viết tắt A→Z |
+| 18 | [kerberos-attacks](AD-concepts/18-kerberos-attacks.md) | Kerberos Attacks deep-dive (AS-REP/Kerberoast, delegation, Golden/Silver, PtT) |
 
 ---
 
